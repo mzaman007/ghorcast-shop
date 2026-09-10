@@ -736,11 +736,10 @@ function filterProducts() {
     });
 
 
-    noProducts.style.display =
-        visible === 0
-            ? "block"
-            : "none";
-
+    if (visible === 0) {
+    noProducts.classList.add("show");
+} else {
+    noProducts.classList.remove("show");
 }
 
 
