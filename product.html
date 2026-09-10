@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product | GhorCastShop</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =========================
+           PRODUCT PAGE
+        ========================= */
+
+        .product-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        .product-back {
+            display: inline-block;
+            margin-bottom: 35px;
+            color: #17202a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .product-back:hover {
+            color: #c79a4b;
+        }
+
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .product-detail-image {
+            background: #f5f3ef;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .product-detail-image img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-category {
+            color: #c79a4b;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .product-detail-info h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            line-height: 1.1;
+            margin: 0 0 20px;
+            color: #17202a;
+        }
+
+        .product-description {
+            color: #667085;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .product-price {
+            font-size: 30px;
+            font-weight: 700;
+            color: #17202a;
+            margin-bottom: 30px;
+        }
+
+        .product-old-price {
+            font-size: 17px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+            font-weight: 400;
+        }
+
+        .quantity-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .quantity-box label {
+            font-weight: 600;
+            color: #17202a;
+        }
+
+        .quantity-box input {
+            width: 70px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .product-button {
+            border: none;
+            border-radius: 10px;
+            padding: 15px 28px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .add-button {
+            background: #17202a;
+            color: white;
+        }
+
+        .add-button:hover {
+            background: #c79a4b;
+        }
+
+        .buy-button {
+            background: #c79a4b;
+            color: white;
+        }
+
+        .buy-button:hover {
+            background: #a8782f;
+        }
+
+        .product-message {
+            margin-top: 18px;
+            min-height: 24px;
+            font-weight: 600;
+        }
+
+        .product-not-found {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .product-not-found h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .product-not-found a {
+            color: #c79a4b;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 800px) {
+
+            .product-detail {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .product-detail-image img {
+                height: 400px;
+            }
+
+            .product-detail-info h1 {
+                font-size: 36px;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .product-page {
+                padding: 45px 15px;
+            }
+
+            .product-detail-image img {
+                height: 320px;
+            }
+
+            .product-detail-info h1 {
+                font-size: 30px;
+            }
+
+            .product-button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            <span>GHORCAST</span>
+            <strong>SHOP</strong>
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Shop
+            </a>
+
+            <a href="products.html?category=luggage">
+                Luggage
+            </a>
+
+            <a href="products.html?category=bags">
+                Bags
+            </a>
+
+            <a href="products.html?category=travel">
+                Travel
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="account.html">
+                Account
+            </a>
+
+            <a href="cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     PRODUCT
+========================= -->
+
+<main class="product-page">
+
+    <a
+        href="products.html"
+        class="product-back"
+    >
+        ← Back to Shop
+    </a>
+
+
+    <div id="productContainer">
+
+        <!-- Product loaded by JavaScript -->
+
+    </div>
+
+</main>
+
+
+<script>
+
+/* =========================
+   PRODUCT DATA
+========================= */
+
+const products = {
+
+    suitcase: {
+
+        id: "suitcase",
+
+        name: "Premium Travel Suitcase",
+
+        category: "Luggage",
+
+        price: 129,
+
+        oldPrice: 159,
+
+        description:
+            "A premium travel suitcase designed for smooth journeys, reliable storage and modern travelers.",
+
+        image:
+            "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=1200&q=80"
+
+    },
+
+
+    backpack: {
+
+        id: "backpack",
+
+        name: "Explorer Travel Backpack",
+
+        category: "Bags",
+
+        price: 79,
+
+        oldPrice: 99,
+
+        description:
+            "A versatile travel backpack with practical storage, comfortable carrying and a clean modern design.",
+
+        image:
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80"
+
+    },
+
+
+    adapter: {
+
+        id: "adapter",
+
+        name: "Universal Travel Adapter",
+
+        category: "Travel",
+
+        price: 29,
+
+        oldPrice: 39,
+
+        description:
+            "A compact universal travel adapter made to keep your devices connected while traveling around the world.",
+
+        image:
+            "https://images.unsplash.com/photo-1609592424565-8c7f8e6f7f7a?auto=format&fit=crop&w=1200&q=80"
+
+    },
+
+
+    pillow: {
+
+        id: "pillow",
+
+        name: "Premium Travel Pillow",
+
+        category: "Comfort",
+
+        price: 35,
+
+        oldPrice: 45,
+
+        description:
+            "A comfortable travel pillow designed to make long flights, road trips and journeys more relaxing.",
+
+        image:
+            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1200&q=80"
+
+    }
+
+};
+
+
+/* =========================
+   CART
+========================= */
+
+function getCart() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem("ghorcastCart")
+        ) || [];
+
+    } catch (error) {
+
+        return [];
+
+    }
+
+}
+
+
+function updateCartCount() {
+
+    const cart = getCart();
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        total += Number(item.quantity) || 0;
+
+    });
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    if (cartCount) {
+
+        cartCount.textContent = total;
+
+    }
+
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addProductToCart() {
+
+    const productId =
+        new URLSearchParams(
+            window.location.search
+        ).get("id");
+
+    const product =
+        products[productId];
+
+    if (!product) return;
+
+
+    const quantityInput =
+        document.getElementById("quantity");
+
+    const quantity =
+        Math.max(
+            1,
+            Number(quantityInput.value) || 1
+        );
+
+
+    const cart = getCart();
+
+
+    const existing =
+        cart.find(
+            item => item.id === product.id
+        );
+
+
+    if (existing) {
+
+        existing.quantity =
+            Number(existing.quantity) +
+            quantity;
+
+    } else {
+
+        cart.push({
+
+            id: product.id,
+
+            name: product.name,
+
+            price: product.price,
+
+            image: product.image,
+
+            quantity: quantity
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "ghorcastCart",
+        JSON.stringify(cart)
+    );
+
+
+    updateCartCount();
+
+
+    const message =
+        document.getElementById(
+            "productMessage"
+        );
+
+    message.textContent =
+        "Added to cart ✓";
+
+
+    setTimeout(() => {
+
+        message.textContent = "";
+
+    }, 2000);
+
+}
+
+
+/* =========================
+   BUY NOW
+========================= */
+
+function buyNow() {
+
+    const productId =
+        new URLSearchParams(
+            window.location.search
+        ).get("id");
+
+    const product =
+        products[productId];
+
+    if (!product) return;
+
+
+    const quantityInput =
+        document.getElementById("quantity");
+
+    const quantity =
+        Math.max(
+            1,
+            Number(quantityInput.value) || 1
+        );
+
+
+    const buyNowItem = {
+
+        id: product.id,
+
+        name: product.name,
+
+        price: product.price,
+
+        image: product.image,
+
+        quantity: quantity
+
+    };
+
+
+    localStorage.setItem(
+        "ghorcastBuyNow",
+        JSON.stringify(buyNowItem)
+    );
+
+
+    window.location.href =
+        "checkout.html";
+
+}
+
+
+/* =========================
+   LOAD PRODUCT
+========================= */
+
+function loadProduct() {
+
+    const productId =
+        new URLSearchParams(
+            window.location.search
+        ).get("id");
+
+
+    const product =
+        products[productId];
+
+
+    const container =
+        document.getElementById(
+            "productContainer"
+        );
+
+
+    if (!product) {
+
+        container.innerHTML = `
+
+            <div class="product-not-found">
+
+                <h2>
+                    Product Not Found
+                </h2>
+
+                <p>
+                    The product you are looking for does not exist.
+                </p>
+
+                <br>
+
+                <a href="products.html">
+                    Return to Shop
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = `
+
+        <div class="product-detail">
+
+            <div class="product-detail-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="product-detail-info">
+
+                <div class="product-category">
+                    ${product.category}
+                </div>
+
+
+                <h1>
+                    ${product.name}
+                </h1>
+
+
+                <p class="product-description">
+                    ${product.description}
+                </p>
+
+
+                <div class="product-price">
+
+                    $${product.price}
+
+                    <span class="product-old-price">
+                        $${product.oldPrice}
+                    </span>
+
+                </div>
+
+
+                <div class="quantity-box">
+
+                    <label for="quantity">
+                        Quantity
+                    </label>
+
+                    <input
+                        id="quantity"
+                        type="number"
+                        min="1"
+                        value="1"
+                    >
+
+                </div>
+
+
+                <div class="product-buttons">
+
+                    <button
+                        class="product-button add-button"
+                        onclick="addProductToCart()"
+                    >
+                        Add to Cart
+                    </button>
+
+
+                    <button
+                        class="product-button buy-button"
+                        onclick="buyNow()"
+                    >
+                        Buy Now
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="productMessage"
+                    class="product-message"
+                ></div>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+loadProduct();
+
+updateCartCount();
+
+</script>
+
+
+</body>
+
+</html>
