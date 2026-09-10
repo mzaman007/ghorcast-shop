@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | GhorCastShop</title>
+
+    <meta name="description"
+          content="Shop premium travel essentials at GhorCastShop.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-main">GHORCAST</span>
+            <span class="brand-shop">SHOP</span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="products.html" class="active">
+                Shop
+            </a>
+
+            <a href="products.html?category=luggage">
+                Luggage
+            </a>
+
+            <a href="products.html?category=bags">
+                Bags
+            </a>
+
+            <a href="products.html?category=travel">
+                Travel
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="account.html">
+                Account
+            </a>
+
+            <a href="cart.html" class="cart-link">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- SHOP HERO -->
+<section class="shop-hero">
+
+    <div class="shop-hero-content">
+
+        <span class="eyebrow">
+            GHORCAST COLLECTION
+        </span>
+
+        <h1>
+            Travel better.
+            <br>
+            Carry smarter.
+        </h1>
+
+        <p>
+            Discover carefully selected travel essentials
+            designed for every journey.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP CONTENT -->
+<main class="shop-container">
+
+    <!-- TOP BAR -->
+    <div class="shop-toolbar">
+
+        <div>
+            <span class="shop-label">
+                OUR PRODUCTS
+            </span>
+
+            <h2>
+                Travel Essentials
+            </h2>
+        </div>
+
+
+        <div class="shop-controls">
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="productSearch"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+
+                <span>⌕</span>
+
+            </div>
+
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="luggage">
+                    Luggage
+                </option>
+
+                <option value="bags">
+                    Bags
+                </option>
+
+                <option value="travel">
+                    Travel Accessories
+                </option>
+
+                <option value="comfort">
+                    Travel Comfort
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+    <section class="shop-products">
+
+        <div
+            class="products-grid"
+            id="productsGrid"
+        >
+
+
+            <!-- PRODUCT 1 -->
+            <article
+                class="shop-product-card"
+                data-category="luggage"
+                data-name="Premium Travel Suitcase"
+            >
+
+                <div class="product-photo">
+
+                    <span class="product-badge">
+                        BEST SELLER
+                    </span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1565026057447-bc90a4d8f3eb?auto=format&fit=crop&w=900&q=85"
+                        alt="Premium Travel Suitcase"
+                    >
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="product-category">
+                        LUGGAGE
+                    </span>
+
+                    <h3>
+                        Premium Travel Suitcase
+                    </h3>
+
+                    <p class="product-description">
+                        Lightweight and durable luggage
+                        made for modern travelers.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $129.00
+                        </strong>
+
+                        <span class="old-price">
+                            $159.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-actions">
+
+                        <a
+                            href="product.html?id=suitcase"
+                            class="view-button"
+                        >
+                            View Product
+                        </a>
+
+                        <button
+                            class="add-cart-button"
+                            data-id="suitcase"
+                            data-name="Premium Travel Suitcase"
+                            data-price="129"
+                            data-image="https://images.unsplash.com/photo-1565026057447-bc90a4d8f3eb?auto=format&fit=crop&w=900&q=85"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+            <article
+                class="shop-product-card"
+                data-category="bags"
+                data-name="Explorer Travel Backpack"
+            >
+
+                <div class="product-photo">
+
+                    <span class="product-badge">
+                        POPULAR
+                    </span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+                        alt="Explorer Travel Backpack"
+                    >
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="product-category">
+                        BAGS
+                    </span>
+
+                    <h3>
+                        Explorer Travel Backpack
+                    </h3>
+
+                    <p class="product-description">
+                        Spacious everyday backpack
+                        with smart travel storage.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $79.00
+                        </strong>
+
+                        <span class="old-price">
+                            $99.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-actions">
+
+                        <a
+                            href="product.html?id=backpack"
+                            class="view-button"
+                        >
+                            View Product
+                        </a>
+
+                        <button
+                            class="add-cart-button"
+                            data-id="backpack"
+                            data-name="Explorer Travel Backpack"
+                            data-price="79"
+                            data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+            <article
+                class="shop-product-card"
+                data-category="travel"
+                data-name="Universal Travel Adapter"
+            >
+
+                <div class="product-photo">
+
+                    <span class="product-badge">
+                        ESSENTIAL
+                    </span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=900&q=85"
+                        alt="Universal Travel Adapter"
+                    >
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="product-category">
+                        TRAVEL
+                    </span>
+
+                    <h3>
+                        Universal Travel Adapter
+                    </h3>
+
+                    <p class="product-description">
+                        Compact worldwide adapter
+                        for international journeys.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $29.00
+                        </strong>
+
+                        <span class="old-price">
+                            $39.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-actions">
+
+                        <a
+                            href="product.html?id=adapter"
+                            class="view-button"
+                        >
+                            View Product
+                        </a>
+
+                        <button
+                            class="add-cart-button"
+                            data-id="adapter"
+                            data-name="Universal Travel Adapter"
+                            data-price="29"
+                            data-image="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=900&q=85"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+            <article
+                class="shop-product-card"
+                data-category="comfort"
+                data-name="Premium Travel Pillow"
+            >
+
+                <div class="product-photo">
+
+                    <span class="product-badge">
+                        COMFORT
+                    </span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600369671236-e74521d4b9ad?auto=format&fit=crop&w=900&q=85"
+                        alt="Premium Travel Pillow"
+                    >
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="product-category">
+                        COMFORT
+                    </span>
+
+                    <h3>
+                        Premium Travel Pillow
+                    </h3>
+
+                    <p class="product-description">
+                        Comfortable neck support
+                        for long flights and journeys.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $35.00
+                        </strong>
+
+                        <span class="old-price">
+                            $45.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-actions">
+
+                        <a
+                            href="product.html?id=pillow"
+                            class="view-button"
+                        >
+                            View Product
+                        </a>
+
+                        <button
+                            class="add-cart-button"
+                            data-id="pillow"
+                            data-name="Premium Travel Pillow"
+                            data-price="35"
+                            data-image="https://images.unsplash.com/photo-1600369671236-e74521d4b9ad?auto=format&fit=crop&w=900&q=85"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+        <div
+            id="noProducts"
+            class="no-products"
+            style="display:none;"
+        >
+
+            <h3>
+                No products found
+            </h3>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="shop-footer">
+
+    <div class="footer-inner">
+
+        <div>
+            <strong>GHORCAST SHOP</strong>
+
+            <p>
+                Travel essentials for every journey.
+            </p>
+        </div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Cart</a>
+            <a href="account.html">Account</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 GhorCastShop. All rights reserved.
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   CART STORAGE
+========================= */
+
+function getCart() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem("ghorcastCart")
+        ) || [];
+
+    } catch (error) {
+
+        return [];
+
+    }
+
+}
+
+
+/* =========================
+   UPDATE CART COUNT
+========================= */
+
+function updateCartCount() {
+
+    const cart = getCart();
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        total += Number(item.quantity) || 0;
+
+    });
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = total;
+
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart(button) {
+
+    const product = {
+
+        id: button.dataset.id,
+
+        name: button.dataset.name,
+
+        price: Number(
+            button.dataset.price
+        ),
+
+        image: button.dataset.image,
+
+        quantity: 1
+
+    };
+
+
+    const cart = getCart();
+
+    const existing = cart.find(
+        item => item.id === product.id
+    );
+
+
+    if (existing) {
+
+        existing.quantity =
+            Number(existing.quantity) + 1;
+
+    } else {
+
+        cart.push(product);
+
+    }
+
+
+    localStorage.setItem(
+        "ghorcastCart",
+        JSON.stringify(cart)
+    );
+
+
+    updateCartCount();
+
+
+    const originalText =
+        button.textContent;
+
+    button.textContent =
+        "Added ✓";
+
+    button.classList.add(
+        "added"
+    );
+
+
+    setTimeout(() => {
+
+        button.textContent =
+            originalText;
+
+        button.classList.remove(
+            "added"
+        );
+
+    }, 1200);
+
+}
+
+
+/* =========================
+   BUTTON EVENTS
+========================= */
+
+document
+    .querySelectorAll(
+        ".add-cart-button"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => addToCart(button)
+        );
+
+    });
+
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+const searchInput =
+    document.getElementById(
+        "productSearch"
+    );
+
+const categoryFilter =
+    document.getElementById(
+        "categoryFilter"
+    );
+
+const productCards =
+    document.querySelectorAll(
+        ".shop-product-card"
+    );
+
+const noProducts =
+    document.getElementById(
+        "noProducts"
+    );
+
+
+function filterProducts() {
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+    const category =
+        categoryFilter.value;
+
+    let visible = 0;
+
+
+    productCards.forEach(card => {
+
+        const name =
+            card.dataset.name
+                .toLowerCase();
+
+        const cardCategory =
+            card.dataset.category;
+
+
+        const matchesSearch =
+            name.includes(search);
+
+        const matchesCategory =
+            category === "all" ||
+            cardCategory === category;
+
+
+        if (
+            matchesSearch &&
+            matchesCategory
+        ) {
+
+            card.style.display =
+                "";
+
+            visible++;
+
+        } else {
+
+            card.style.display =
+                "none";
+
+        }
+
+    });
+
+
+    noProducts.style.display =
+        visible === 0
+            ? "block"
+            : "none";
+
+}
+
+
+searchInput.addEventListener(
+    "input",
+    filterProducts
+);
+
+categoryFilter.addEventListener(
+    "change",
+    filterProducts
+);
+
+
+/* =========================
+   URL CATEGORY
+========================= */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const urlCategory =
+    params.get("category");
+
+
+if (urlCategory) {
+
+    const validCategories = [
+        "luggage",
+        "bags",
+        "travel",
+        "comfort"
+    ];
+
+    if (
+        validCategories.includes(
+            urlCategory
+        )
+    ) {
+
+        categoryFilter.value =
+            urlCategory;
+
+        filterProducts();
+
+    }
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>
