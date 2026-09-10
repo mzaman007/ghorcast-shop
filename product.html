@@ -19,7 +19,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.gstatic.com"
+        href="https://fonts.googleapis.com"
         crossorigin
     >
 
@@ -34,10 +34,6 @@
     >
 
     <style>
-
-        /* =========================
-           PRODUCT PAGE
-        ========================= */
 
         .product-page {
             max-width: 1200px;
@@ -239,32 +235,24 @@
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header class="site-header">
 
     <div class="header-inner">
 
-        <a
-            href="index.html"
-            class="logo"
-        >
+        <a href="index.html" class="logo">
+
             <span>GHORCAST</span>
+
             <strong>SHOP</strong>
+
         </a>
 
 
         <nav class="main-nav">
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
 
-            <a href="products.html">
-                Shop
-            </a>
+            <a href="products.html">Shop</a>
 
             <a href="products.html?category=luggage">
                 Luggage
@@ -287,8 +275,11 @@
             </a>
 
             <a href="cart.html">
+
                 Cart
+
                 <span id="cartCount">0</span>
+
             </a>
 
         </nav>
@@ -298,11 +289,8 @@
 </header>
 
 
-<!-- =========================
-     PRODUCT
-========================= -->
-
 <main class="product-page">
+
 
     <a
         href="products.html"
@@ -312,20 +300,14 @@
     </a>
 
 
-    <div id="productContainer">
+    <div id="productContainer"></div>
 
-        <!-- Product loaded by JavaScript -->
-
-    </div>
 
 </main>
 
 
 <script>
 
-/* =========================
-   PRODUCT DATA
-========================= */
 
 const products = {
 
@@ -345,7 +327,7 @@ const products = {
             "A premium travel suitcase designed for smooth journeys, reliable storage and modern travelers.",
 
         image:
-    "https://images.unsplash.com/photo-1565026057447-bc90a4d8f3eb?auto=format&fit=crop&w=900&q=85"
+            "https://images.unsplash.com/photo-1565026057447-bc90a4d8f3eb?auto=format&fit=crop&w=1200&q=85"
 
     },
 
@@ -366,7 +348,7 @@ const products = {
             "A versatile travel backpack with practical storage, comfortable carrying and a clean modern design.",
 
         image:
-            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85"
 
     },
 
@@ -387,7 +369,8 @@ const products = {
             "A compact universal travel adapter made to keep your devices connected while traveling around the world.",
 
         image:
-    "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=900&q=85"
+            "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=1200&q=85"
+
     },
 
 
@@ -407,16 +390,12 @@ const products = {
             "A comfortable travel pillow designed to make long flights, road trips and journeys more relaxing.",
 
         image:
-    "https://images.unsplash.com/photo-1600369671236-e74521d4b9ad?auto=format&fit=crop&w=900&q=85"
+            "https://images.unsplash.com/photo-1600369671236-e74521d4b9ad?auto=format&fit=crop&w=1200&q=85"
 
     }
 
 };
 
-
-/* =========================
-   CART
-========================= */
 
 function getCart() {
 
@@ -447,8 +426,10 @@ function updateCartCount() {
 
     });
 
+
     const cartCount =
         document.getElementById("cartCount");
+
 
     if (cartCount) {
 
@@ -459,10 +440,6 @@ function updateCartCount() {
 }
 
 
-/* =========================
-   ADD TO CART
-========================= */
-
 function addProductToCart() {
 
     const productId =
@@ -470,14 +447,21 @@ function addProductToCart() {
             window.location.search
         ).get("id");
 
+
     const product =
         products[productId];
 
-    if (!product) return;
+
+    if (!product) {
+
+        return;
+
+    }
 
 
     const quantityInput =
         document.getElementById("quantity");
+
 
     const quantity =
         Math.max(
@@ -534,22 +518,27 @@ function addProductToCart() {
             "productMessage"
         );
 
-    message.textContent =
-        "Added to cart ✓";
+
+    if (message) {
+
+        message.textContent =
+            "Added to cart ✓";
+
+    }
 
 
     setTimeout(() => {
 
-        message.textContent = "";
+        if (message) {
+
+            message.textContent = "";
+
+        }
 
     }, 2000);
 
 }
 
-
-/* =========================
-   BUY NOW
-========================= */
 
 function buyNow() {
 
@@ -558,14 +547,21 @@ function buyNow() {
             window.location.search
         ).get("id");
 
+
     const product =
         products[productId];
 
-    if (!product) return;
+
+    if (!product) {
+
+        return;
+
+    }
 
 
     const quantityInput =
         document.getElementById("quantity");
+
 
     const quantity =
         Math.max(
@@ -601,16 +597,16 @@ function buyNow() {
 }
 
 
-/* =========================
-   LOAD PRODUCT
-========================= */
-
 function loadProduct() {
 
-    const productId =
+    const params =
         new URLSearchParams(
             window.location.search
-        ).get("id");
+        );
+
+
+    const productId =
+        params.get("id");
 
 
     const product =
@@ -621,6 +617,13 @@ function loadProduct() {
         document.getElementById(
             "productContainer"
         );
+
+
+    if (!container) {
+
+        return;
+
+    }
 
 
     if (!product) {
@@ -656,6 +659,7 @@ function loadProduct() {
 
         <div class="product-detail">
 
+
             <div class="product-detail-image">
 
                 <img
@@ -668,18 +672,25 @@ function loadProduct() {
 
             <div class="product-detail-info">
 
+
                 <div class="product-category">
+
                     ${product.category}
+
                 </div>
 
 
                 <h1>
+
                     ${product.name}
+
                 </h1>
 
 
                 <p class="product-description">
+
                     ${product.description}
+
                 </p>
 
 
@@ -688,7 +699,9 @@ function loadProduct() {
                     $${product.price}
 
                     <span class="product-old-price">
+
                         $${product.oldPrice}
+
                     </span>
 
                 </div>
@@ -696,46 +709,77 @@ function loadProduct() {
 
                 <div class="quantity-box">
 
+
                     <label for="quantity">
+
                         Quantity
+
                     </label>
 
+
                     <input
+
                         id="quantity"
+
                         type="number"
+
                         min="1"
+
                         value="1"
+
                     >
+
 
                 </div>
 
 
                 <div class="product-buttons">
 
+
                     <button
+
+                        type="button"
+
                         class="product-button add-button"
+
                         onclick="addProductToCart()"
+
                     >
+
                         Add to Cart
+
                     </button>
 
 
                     <button
+
+                        type="button"
+
                         class="product-button buy-button"
+
                         onclick="buyNow()"
+
                     >
+
                         Buy Now
+
                     </button>
+
 
                 </div>
 
 
                 <div
+
                     id="productMessage"
+
                     class="product-message"
+
                 ></div>
 
+
             </div>
+
 
         </div>
 
@@ -744,13 +788,10 @@ function loadProduct() {
 }
 
 
-/* =========================
-   START
-========================= */
-
 loadProduct();
 
 updateCartCount();
+
 
 </script>
 
