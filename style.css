@@ -1263,3 +1263,16 @@ button {
         animation-iteration-count: 1 !important;
     }
 }
+/* your existing CSS */
+
+/* =========================
+   NEVER SHOW EMPTY MESSAGE
+========================= */
+
+#noProducts {
+    display: none !important;
+}
+
+#noProducts.show {
+    display: block !important;
+}
